@@ -4,12 +4,54 @@
   box-sizing: border-box;
 }
 
+.bg-darkBlue{
+  background-color: rgb(36, 34, 51);
+}
+
+.color-white{
+  color: white;
+}
+
+.color-red{
+  color: red;
+}
+
+
 header{
   height: 120px;
-  background-color: rgb(36, 34, 51);
   color: white;
   font-family: sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+main{
+  height: auto;
+}
+
+.container{
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  margin-top: 60px;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.col-4{
+  width: calc(80%/3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.margin-bootm-10px{
+  margin-bottom: 40px;
 }
