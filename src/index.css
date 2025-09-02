@@ -8,8 +8,16 @@
   background-color: rgb(36, 34, 51);
 }
 
+.w-80per{
+  width: 80%;
+}
+
 .color-white{
   color: white;
+}
+
+.color-yellow{
+  color: yellow;
 }
 
 .color-red{
@@ -52,6 +60,6 @@ main{
   justify-content: center;
 }
 
-.margin-bootm-10px{
+.margin-bottom-10px{
   margin-bottom: 40px;
 }
