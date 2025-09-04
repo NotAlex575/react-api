@@ -44,20 +44,29 @@ const Main = () => {
                     <button className="button-maschi" onClick={() => setGenere("uomini")}>Uomini</button>
                     <button className="button-donne" onClick={() => setGenere("donne")}>Donne</button>
                 </div>
-                <input 
-                    type="text" 
-                    placeholder="Cerca attore per nome" 
-                    className="w-bar-100per"
-                    value={searchPersonaggi}
-                    onChange={(event) => setSearchPersonaggi(event.target.value)}
-                    //ogni volta che si inserisce un contenuto qui (che si trovi o non si trovi nella lista),
-                    //la lista si aggiorna
-                />
-                <div className="row">
-                    {filteredPersonaggi.map((personaggio) =>{
-                        return <CardPersonaggio key={personaggio.id} personaggio={personaggio}></CardPersonaggio>
-                    })}
-                </div>
+
+                {!genere?(
+                    <div className="row">
+                        <h2>Clicca uno dei 2 pulsanti per vedere gli attori nella lista</h2>
+                    </div>
+                ) : (
+                <>
+                    <input 
+                        type="text" 
+                        placeholder="Cerca attore per nome" 
+                        className="w-bar-100per"
+                        value={searchPersonaggi}
+                        onChange={(event) => setSearchPersonaggi(event.target.value)}
+                        //ogni volta che si inserisce un contenuto qui (che si trovi o non si trovi nella lista),
+                        //la lista si aggiorna
+                    />
+                    <div className="row">
+                        {filteredPersonaggi.map((personaggio) =>{
+                            return <CardPersonaggio key={personaggio.id} personaggio={personaggio}></CardPersonaggio>
+                        })}
+                    </div>
+                </>
+                )}          
             </div>
             <br /><br />
         </main>
